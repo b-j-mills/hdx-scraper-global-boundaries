@@ -1,0 +1,48 @@
+UN_boundaries:
+  dataset: "unmap-international-boundaries-geojson"
+  resources:
+    polbnda_adm1_1m_ocha.geojson: "adm1_polygon"
+    polbndp_adm1_1m_ocha.geojson: "adm1_point"
+    polbnda_adm2_1m_ocha.geojson: "adm2_polygon"
+    polbndp_adm2_1m_ocha.geojson: "adm2_point"
+    polbnda_adm3_1m_ocha.geojson: "adm3_polygon"
+    polbndp_adm3_1m_ocha.geojson: "adm3_point"
+    wrl_polbnda_int_1m_uncs.geojson: "adm0_polygon"
+    wrl_polbnda_int_15m_uncs.geojson: "adm0_polygon_lowres"
+    wrl_lakeresa_lake_1m_uncs.geojson: "water"
+
+dataset_exceptions:
+  MMR: "mimu-geonode-myanmar-state-and-region-boundaries-mimu"
+
+resource_exceptions:
+  HND: "hnd_adm_sinit_20161005_SHP.zip"
+  LBN: "lbn_adm_cdr_20200810.zip"
+  MMR: "Myanmar State and Region Boundaries MIMU v9.3 shapefile"
+  MOZ: "moz_adm_20190607b_SHP.zip"
+  SYR: "SYR Administrative Divisions Shapefiles.zip"
+
+do_not_process:
+  - BHR
+  - UKR
+
+levels:
+  - adm1
+  - adm2
+  - adm3
+
+shapefile_attribute_mappings:
+  pcode:
+    - "ADM#_PCODE"
+    - "ADMIN#PCOD"
+    - "ST_PCODE"
+    - "ADM#_ID"
+  name:
+    - "ADM#_NAME"
+    - "ADM#_EN"
+    - "ADM#_ES"
+    - "ADM#_FR"
+    - "ADM#_PT"
+    - "ADMIN#NAME"
+    - "NAME_#"
+    - "ST"
+    - "SHAPENAME"
