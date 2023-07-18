@@ -53,7 +53,6 @@ def main(
             )
 
             boundaries.download_boundary_inputs(levels)
-
             for country in countries:
                 boundaries.update_subnational_boundaries(
                     countries[country],

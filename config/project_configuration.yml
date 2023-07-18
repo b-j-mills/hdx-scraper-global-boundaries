@@ -42,6 +42,7 @@ shapefile_attribute_mappings:
     - "ADM#_ES"
     - "ADM#_FR"
     - "ADM#_PT"
+    - "ADM#_PL"
     - "ADMIN#NAME"
     - "NAME_#"
     - "ST"
