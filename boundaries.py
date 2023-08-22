@@ -294,11 +294,11 @@ class Boundaries:
         dataset = Dataset.read_from_hdx(dataset_name)
         for level in levels:
             logger.info(f"Updating HDX datasets at {level}")
-            polygon_name = [key for key in self.boundary_names if self.boundary_names[key] == f"{level}_polygon"]
-            point_name = [key for key in self.boundary_names if self.boundary_names[key] == f"{level}_point"]
-            polygon_file = join(self.temp_folder, polygon_name[0])
+            polygon_name = [key for key in self.boundary_names if self.boundary_names[key] == f"{level}_polygon"][0]
+            point_name = [key for key in self.boundary_names if self.boundary_names[key] == f"{level}_point"][0]
+            polygon_file = join(self.temp_folder, polygon_name)
             self.boundaries[f"{level}_polygon"].to_file(polygon_file, driver="GeoJSON")
-            point_file = join(self.temp_folder, point_name[0])
+            point_file = join(self.temp_folder, point_name)
             self.boundaries[f"{level}_point"].to_file(point_file, driver="GeoJSON")
 
             resource_polygon = [r for r in dataset.get_resources() if r["name"] == polygon_name][0]
